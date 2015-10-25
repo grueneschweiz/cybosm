@@ -1,0 +1,285 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cybosm\n"
+"POT-Creation-Date: 2015-10-25 20:21+0100\n"
+"PO-Revision-Date: 2015-10-25 20:27+0100\n"
+"Last-Translator: Cyrill Bolliger <bolliger@gmx.ch>\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:4c,1,2;_n_noop:1,2;"
+"_nx_noop:4c,1,2;esc_html__;esc_html_e;esc_html_x:1,2c;esc_attr__;esc_attr_e;"
+"esc_attr_x:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../cybosm.php:167
+msgid "Facebook"
+msgstr "Facebook"
+
+#: ../cybosm.php:174 ../cybosm.php:211 ../cybosm.php:259 ../cybosm.php:296
+msgid "Choose the functionality of the button"
+msgstr "Wähle die Funktion der Buttons"
+
+#: ../cybosm.php:181 ../cybosm.php:218 ../cybosm.php:266 ../cybosm.php:303
+msgid "Off"
+msgstr "Aus"
+
+#: ../cybosm.php:182 ../cybosm.php:219 ../cybosm.php:267
+msgid "Share button"
+msgstr "Teilen-Button"
+
+#: ../cybosm.php:183
+msgid "Link to fanpage"
+msgstr "Link zur Fanpage"
+
+#: ../cybosm.php:190
+msgid "Link to your fanpage"
+msgstr "Link zu deiner Fanpage"
+
+#: ../cybosm.php:204
+msgid "Twitter"
+msgstr "Twitter"
+
+#: ../cybosm.php:220 ../cybosm.php:268
+msgid "Link to profile"
+msgstr "Link zum Profil"
+
+#: ../cybosm.php:227
+msgid "Link to your twitter profile"
+msgstr "Link zu deinem Twitterprofil"
+
+#: ../cybosm.php:238
+msgid "Username (@example)"
+msgstr "Benutzername (@beispiel)"
+
+#: ../cybosm.php:252
+msgid "Google+"
+msgstr "Google+"
+
+#: ../cybosm.php:275
+msgid "Link to your Google+ profile"
+msgstr "Link zu deinem Google+ Profil"
+
+#: ../cybosm.php:289
+msgid "Youtube"
+msgstr "Youtube"
+
+#: ../cybosm.php:304
+msgid "Link to chanel"
+msgstr "Link zum Kanal"
+
+#: ../cybosm.php:311
+msgid "Link to your Youtube chanel"
+msgstr "Link zu deinem Youtube Kanal"
+
+#: ../cybosm.php:363
+#, php-format
+msgid "Enter your options for the %s button here."
+msgstr "Gib hier deine Einstellung für den %s-Button an."
+
+#: ../cybosm.php:370 ../admin/options.php:2
+msgid "Cybo Social Sharing Options"
+msgstr "Cybo Social Sharing Einstellungen"
+
+#: ../cybosm.php:370 ../includes/class-cybosm-widget.php:26
+msgid "Cybo Social Sharing"
+msgstr "Cybo Social Sharing"
+
+#: ../cybosm.php:378
+msgid "You do not have sufficient permissions to access this page."
+msgstr "Nicht genügend Rechte um diese Seite anzuzeigen."
+
+#: ../includes/class-cybosm-frontend.php:76
+msgid "Share this page on facebook"
+msgstr "Diese Seite auf Facebook teilen"
+
+#: ../includes/class-cybosm-frontend.php:76
+msgid "Visit us on facebook"
+msgstr "Besuchen Sie uns auf Facebook"
+
+#: ../includes/class-cybosm-frontend.php:80
+msgid "Share this page on twitter"
+msgstr "Diese Seite auf Twitter teilen"
+
+#: ../includes/class-cybosm-frontend.php:80
+msgid "Visit us on twitter"
+msgstr "Besuchen Sie uns auf Twitter"
+
+#: ../includes/class-cybosm-frontend.php:84
+msgid "Share this page on google+"
+msgstr "Diese Seite auf Google+ teilen"
+
+#: ../includes/class-cybosm-frontend.php:84
+msgid "Visit us on google+"
+msgstr "Besuchen Sie uns auf Google+"
+
+#: ../includes/class-cybosm-frontend.php:88
+msgid "Check out our youtube chanel"
+msgstr "Besuchen Sie unseren Youtube Kanal"
+
+#: ../includes/class-cybosm-widget.php:29
+msgid "Displays the social buttons as definded on the settings page."
+msgstr "Zeigt die Social Buttons gemäss Einstellungen an."
+
+#: ../includes/class-cybosm-widget.php:63
+msgid "The world is social."
+msgstr "Die Welt ist sozial."
+
+#: ../includes/class-cybosm-widget.php:68
+msgid "Title:"
+msgstr "Titel:"
+
+#~ msgid "Unterschriften eintragen"
+#~ msgstr "Ajouter signatures"
+
+#~ msgid "NEU gesammelte Unterschriften"
+#~ msgstr "Signatures NOUVELLEMENT récoltées"
+
+#~ msgid "Keine Berechtigung."
+#~ msgstr "Pas d’autorisation"
+
+#~ msgid "Kanton"
+#~ msgstr "Canton"
+
+#~ msgid "Gruppe"
+#~ msgstr "Groupe"
+
+#~ msgid "Bitte %s auswählen."
+#~ msgstr "Choisir %s"
+
+#~ msgid "Gruppe nicht gefunden."
+#~ msgstr "Groupe introuvable"
+
+#~ msgid "Es wurden keine Unterschriften eingetragen."
+#~ msgstr "Aucune signature n’a été inscrite"
+
+#~ msgid "Jupi! Deine Unterschriften wurden eingetragen. Neuer Sammelstand: %d"
+#~ msgstr "Super! Tes signatures ont été saisies. Nouveau total: %d"
+
+#~ msgid ""
+#~ "Leider gab es einen Fehler. Es wurden keine Unterschriften eingetragen. "
+#~ "Bitte erneut versuchen. Falls es wieder vorkommt, wende dich bitte an "
+#~ "info@zersiedelung-stoppen.ch."
+#~ msgstr ""
+#~ "Malheureusement il y avait une erreur. Aucune signature n’a été saisie. "
+#~ "Réessaye s’il te plaît. Si cela se reproduit, adresse toi à info@stop-"
+#~ "mitage.ch"
+
+#~ msgid "Gesammtübersicht"
+#~ msgstr "Vue d’ensemble"
+
+#~ msgid "Sammelstand in 1000er. Ziel: 120'000 (100'000 + Reserve)"
+#~ msgstr ""
+#~ "Signatures récoltées en milliers. Objectif : 120’000 (100’000 + réserve)"
+
+#~ msgid "Übersicht Kantone"
+#~ msgstr "Aperçu cantons"
+
+#~ msgid "Sammelstand in Prozent der Quote."
+#~ msgstr "Signatures récoltées en pourcent du quota."
+
+#~ msgid "Übersicht Seki"
+#~ msgstr "Aperçu seki"
+
+#~ msgid "Übersicht Gruppen"
+#~ msgstr "Aperçu groupes"
+
+#~ msgid "Aktueller Sammelstand"
+#~ msgstr "Signatures récoltées jusqu’à ce jour"
+
+#~ msgid "Typ nicht gefunden"
+#~ msgstr "Type pas trouvé"
+
+#~ msgid "Gesammelt"
+#~ msgstr "Récolté"
+
+#~ msgid "Im Seki"
+#~ msgstr "Dans le seki"
+
+#~ msgid "Beglaubigt"
+#~ msgstr "Certifié"
+
+#~ msgid "Es wurde nichts geändert."
+#~ msgstr "Rien n'a été changé"
+
+#~ msgid "Rechte angepasst."
+#~ msgstr "Droits adaptés."
+
+#~ msgid "Leider gab es einen Fehler. Bitte versuche es erneut"
+#~ msgstr "Malheureusement il y avait une erreur. Réessaye s’il te plaît."
+
+#~ msgid "Bitte einloggen"
+#~ msgstr "Connecte-toi s’il te plait"
+
+#~ msgid "%s auswählen"
+#~ msgstr "Sélectionnez %s"
+
+#~ msgid "Details anzeigen / Unterschriften Eintragen"
+#~ msgstr "Voir détails / Soumettre signatures"
+
+#~ msgid "letzter Monat"
+#~ msgstr "le mois dernier"
+
+#~ msgid "letzte Woche"
+#~ msgstr "la semaine dernière"
+
+#~ msgid "Stars des Monats"
+#~ msgstr "Vedettes du mois"
+
+#~ msgid "Stars der Woche"
+#~ msgstr "Vedettes de la semaine"
+
+#~ msgid "%s: <strong>%s</strong> mit <strong>%01.2f%%</strong> ihrer Quote."
+#~ msgstr ""
+#~ "%s : <strong>%s</ strong> avec <strong>%01.2f %%</ strong> de leur quota."
+
+#~ msgid "%s: <strong>%s</strong> mit <strong>%d</strong> Unterschriften"
+#~ msgstr "%s : <strong>%s</ strong> avec <strong>%d</ strong> signatures"
+
+#~ msgid "Name"
+#~ msgstr "Nom"
+
+#~ msgid "Zurück zur Übersicht"
+#~ msgstr "Retour à la vue d’ensemble"
+
+#~ msgid "Details %s"
+#~ msgstr "Détails %s"
+
+#~ msgid ""
+#~ "Die folgende Tabelle listet die letzten %d Unterschrifteneinträge auf."
+#~ msgstr ""
+#~ "Le tableau suivant présente les dernières %d enregistrements des "
+#~ "signatures."
+
+#~ msgid "Datum"
+#~ msgstr "Date"
+
+#~ msgid "Eingetragen von"
+#~ msgstr "Enregistré par"
+
+#~ msgid "Dazugekommene Unterschriften"
+#~ msgstr "Signatures ajoutées"
+
+#~ msgid "Sammelstand total %s"
+#~ msgstr "Total des signatures récoltées par %s"
+
+#~ msgid "Noch nichts eingetragen"
+#~ msgstr "Encore rien inséré"
+
+#~ msgid "User management"
+#~ msgstr "Gestion des utilisateurs"
+
+#~ msgid "User auswählen"
+#~ msgstr "Sélectionnez un utilisateur"
+
+#~ msgid "Hallo %s"
+#~ msgstr "Bonjour %s"
+
+#~ msgid "Dein persönlicher Sammelstand beträgt: "
+#~ msgstr "Ton total des signatures personnel est"

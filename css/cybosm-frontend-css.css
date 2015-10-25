@@ -1,0 +1,40 @@
+div#cybosm-side
+	{ position: fixed; right: 0; top: 50%; background-color: #fff; border-radius: 5px 0 0 5px;
+	  box-shadow: 0 0 3px 1px #dadada inset; }
+
+aside.widget_cybosm_widget div#widget_area_cybosm a.cybosm-icon
+	{ float: left; }
+
+a.cybosm-icon
+	{ width: 40px; height: 40px; background: transparent url( '../img/cybosm.png' ); display: block; background-size: 175px 85px; 
+	  border-radius: 5px; box-shadow: 0 0 7px 1px #cc006d inset; margin: 5px; }
+
+a.cybosm-icon:hover
+	{ box-shadow: 0 0 4px 1px #709e2e inset; background-color: #aec504; }
+
+a.cybosm-fb-icon
+	{ background-position: 0 bottom; }
+
+a.cybosm-tw-icon
+	{ background-position: -45px bottom; }
+
+a.cybosm-gp-icon
+	{ background-position: -90px bottom; }
+
+a.cybosm-yt-icon
+	{ background-position: -135px bottom; }
+
+a.cybosm-fb-icon:hover
+	{ background-position: 0 top; }
+
+a.cybosm-tw-icon:hover
+	{ background-position: -45px top; }
+
+a.cybosm-gp-icon:hover
+	{ background-position: -90px top; }
+
+a.cybosm-yt-icon:hover
+	{ background-position: -135px top; }
+
+.screen-reader-text
+	{ clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden; }
