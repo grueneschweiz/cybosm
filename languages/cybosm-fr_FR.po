@@ -1,0 +1,184 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Cybosm\n"
+"POT-Creation-Date: 2015-09-25 12:11+0100\n"
+"PO-Revision-Date: 2015-09-25 12:28+0100\n"
+"Last-Translator: Cyrill Bolliger <bolliger@gmx.ch>\n"
+"Language-Team: \n"
+"Language: FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:4c,1,2;_n_noop:1,2;"
+"_nx_noop:4c,1,2;esc_html__;esc_html_e;esc_html_x:1,2c;esc_attr__;esc_attr_e;"
+"esc_attr_x:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../cybosm.php:137
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: ../admin/options.php:2
+msgid "Cybosm options"
+msgstr ""
+
+#: ../includes/class-cybosm-frontend.php:20
+msgid "Unknown shortcode"
+msgstr ""
+
+#: ../includes/class-cybosm-settings.php:54
+msgid "Cybosm_user"
+msgstr ""
+
+#~ msgid "Unterschriften eintragen"
+#~ msgstr "Ajouter signatures"
+
+#~ msgid "NEU gesammelte Unterschriften"
+#~ msgstr "Signatures NOUVELLEMENT récoltées"
+
+#~ msgid "Keine Berechtigung."
+#~ msgstr "Pas d’autorisation"
+
+#~ msgid "Kanton"
+#~ msgstr "Canton"
+
+#~ msgid "Gruppe"
+#~ msgstr "Groupe"
+
+#~ msgid "Bitte %s auswählen."
+#~ msgstr "Choisir %s"
+
+#~ msgid "Gruppe nicht gefunden."
+#~ msgstr "Groupe introuvable"
+
+#~ msgid "Es wurden keine Unterschriften eingetragen."
+#~ msgstr "Aucune signature n’a été inscrite"
+
+#~ msgid "Jupi! Deine Unterschriften wurden eingetragen. Neuer Sammelstand: %d"
+#~ msgstr "Super! Tes signatures ont été saisies. Nouveau total: %d"
+
+#~ msgid ""
+#~ "Leider gab es einen Fehler. Es wurden keine Unterschriften eingetragen. "
+#~ "Bitte erneut versuchen. Falls es wieder vorkommt, wende dich bitte an "
+#~ "info@zersiedelung-stoppen.ch."
+#~ msgstr ""
+#~ "Malheureusement il y avait une erreur. Aucune signature n’a été saisie. "
+#~ "Réessaye s’il te plaît. Si cela se reproduit, adresse toi à info@stop-"
+#~ "mitage.ch"
+
+#~ msgid "Gesammtübersicht"
+#~ msgstr "Vue d’ensemble"
+
+#~ msgid "Sammelstand in 1000er. Ziel: 120'000 (100'000 + Reserve)"
+#~ msgstr ""
+#~ "Signatures récoltées en milliers. Objectif : 120’000 (100’000 + réserve)"
+
+#~ msgid "Übersicht Kantone"
+#~ msgstr "Aperçu cantons"
+
+#~ msgid "Sammelstand in Prozent der Quote."
+#~ msgstr "Signatures récoltées en pourcent du quota."
+
+#~ msgid "Übersicht Seki"
+#~ msgstr "Aperçu seki"
+
+#~ msgid "Übersicht Gruppen"
+#~ msgstr "Aperçu groupes"
+
+#~ msgid "Aktueller Sammelstand"
+#~ msgstr "Signatures récoltées jusqu’à ce jour"
+
+#~ msgid "Typ nicht gefunden"
+#~ msgstr "Type pas trouvé"
+
+#~ msgid "Gesammelt"
+#~ msgstr "Récolté"
+
+#~ msgid "Im Seki"
+#~ msgstr "Dans le seki"
+
+#~ msgid "Beglaubigt"
+#~ msgstr "Certifié"
+
+#~ msgid "Es wurde nichts geändert."
+#~ msgstr "Rien n'a été changé"
+
+#~ msgid "Rechte angepasst."
+#~ msgstr "Droits adaptés."
+
+#~ msgid "Leider gab es einen Fehler. Bitte versuche es erneut"
+#~ msgstr "Malheureusement il y avait une erreur. Réessaye s’il te plaît."
+
+#~ msgid "Bitte einloggen"
+#~ msgstr "Connecte-toi s’il te plait"
+
+#~ msgid "%s auswählen"
+#~ msgstr "Sélectionnez %s"
+
+#~ msgid "Details anzeigen / Unterschriften Eintragen"
+#~ msgstr "Voir détails / Soumettre signatures"
+
+#~ msgid "letzter Monat"
+#~ msgstr "le mois dernier"
+
+#~ msgid "letzte Woche"
+#~ msgstr "la semaine dernière"
+
+#~ msgid "Stars des Monats"
+#~ msgstr "Vedettes du mois"
+
+#~ msgid "Stars der Woche"
+#~ msgstr "Vedettes de la semaine"
+
+#~ msgid "%s: <strong>%s</strong> mit <strong>%01.2f%%</strong> ihrer Quote."
+#~ msgstr ""
+#~ "%s : <strong>%s</ strong> avec <strong>%01.2f %%</ strong> de leur quota."
+
+#~ msgid "%s: <strong>%s</strong> mit <strong>%d</strong> Unterschriften"
+#~ msgstr "%s : <strong>%s</ strong> avec <strong>%d</ strong> signatures"
+
+#~ msgid "Name"
+#~ msgstr "Nom"
+
+#~ msgid "Zurück zur Übersicht"
+#~ msgstr "Retour à la vue d’ensemble"
+
+#~ msgid "Details %s"
+#~ msgstr "Détails %s"
+
+#~ msgid ""
+#~ "Die folgende Tabelle listet die letzten %d Unterschrifteneinträge auf."
+#~ msgstr ""
+#~ "Le tableau suivant présente les dernières %d enregistrements des "
+#~ "signatures."
+
+#~ msgid "Datum"
+#~ msgstr "Date"
+
+#~ msgid "Eingetragen von"
+#~ msgstr "Enregistré par"
+
+#~ msgid "Dazugekommene Unterschriften"
+#~ msgstr "Signatures ajoutées"
+
+#~ msgid "Sammelstand total %s"
+#~ msgstr "Total des signatures récoltées par %s"
+
+#~ msgid "Noch nichts eingetragen"
+#~ msgstr "Encore rien inséré"
+
+#~ msgid "User management"
+#~ msgstr "Gestion des utilisateurs"
+
+#~ msgid "User auswählen"
+#~ msgstr "Sélectionnez un utilisateur"
+
+#~ msgid "Hallo %s"
+#~ msgstr "Bonjour %s"
+
+#~ msgid "Dein persönlicher Sammelstand beträgt: "
+#~ msgstr "Ton total des signatures personnel est"
