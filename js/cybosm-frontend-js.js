@@ -16,7 +16,7 @@
 		 */
 		this.setup = function setup( crutialWith ) {
 			// return if thw widget wasnt loaded
-			if ( 0 = $( '#widget_area_cybosm' ).length ){
+			if ( 0 == $( '#widget_area_cybosm' ).length ) {
 				return; // BREAKPOINT
 			}
 			
