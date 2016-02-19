@@ -46,6 +46,7 @@ if( ! class_exists( 'Cybosm_Settings' ) ) {
 					CYBOSM_PLUGIN_PREFIX . '_tw_option' => 'share',
 					CYBOSM_PLUGIN_PREFIX . '_gp_option' => 'share',
 					CYBOSM_PLUGIN_PREFIX . '_yt_option' => 'off',
+                         CYBOSM_PLUGIN_PREFIX . '_yt_option' => 'share',
 				)
 			); // put your blog options in here.
 			

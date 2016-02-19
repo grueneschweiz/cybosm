@@ -13,29 +13,39 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
 		/**
 		 * Display the social media icons
 		 */
-		public function display( $id ) {
+		public function display( $id, $sticky, $sharing_only ) {
 			$options = get_option( CYBOSM_PLUGIN_PREFIX . '_options' );
 			
-			$types = array( 'fb', 'tw', 'gp', 'yt' );
-			$icons = array();
+			$types         = array( 'fb', 'tw', 'gp', 'yt', 'em' );
+               $shareable     = array( 'fb', 'tw', 'gp', 'em' );
+			$icons         = array();
 			
-			foreach( $types as $type ) {
-				if ( ! ( 'off' == $options["cybosm_{$type}_option"] ) ) {
-					$icons[$type]['type'] = $type;
-					$icons[$type]['link'] = $this->get_link( $options, $type );
-					$icons[$type]['screenreader'] = $this->get_screenreader_text( $options, $type );
+               if ( $sharing_only ) {
+                    $selected_types = $shareable;
+               } else {
+                    $selected_types = $types;
+               }
+                              
+			foreach( $selected_types as $type ) {
+				if ( ! ( 'off' == $options[ "cybosm_{$type}_option" ] ) ) {
+					$icons[ $type ]['type'] = $type;
+					$icons[ $type ]['link'] = $this->get_link( $options, $type, $sharing_only );
+					$icons[ $type ]['screenreader'] = $this->get_screenreader_text( $options, $type );
 				}
 			}
 			
+               $element_id = empty( $sticky ) ? $id : $id . '-' . $sticky;
+               
 			include CYBOSM_PLUGIN_PATH . '/frontend/cybosm-icons.php';
 		}
 		
 		/**
 		 * Get link of the social icon
 		 */
-		public function get_link( $options, $type ) {
+		public function get_link( $options, $type, $share_only ) {
 			
-			if ( 'visit' == $options["cybosm_{$type}_option"] ) {
+			if ( 'visit' == $options["cybosm_{$type}_option"] 
+                    && false == $share_only ) {
 				return $options["cybosm_{$type}_url"]; // BREAKPOINT
 			}
 			
@@ -61,6 +71,13 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
 				case 'gp':
 					return 'https://plus.google.com/share?url=' . urlencode( $current_url ); // BREAKPOINT
 					break;
+                    
+                    case 'em':
+                         return 'mailto:?subject=' . get_the_title() . '&amp;body=' .
+                                sprintf(
+                                   __( "I'd like to recomend you the following page: %s", 'cybosm' ),
+                                   urlencode( $current_url )
+                                );
 			}
 		}
 		
@@ -86,6 +103,10 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
 				
 				case 'yt':
 					return __( 'Check out our youtube chanel', 'cybosm' ); // BREAKPOINT
+					break;
+                    
+                    case 'em':
+					return __( 'Email this page to a friend.', 'cybosm' ); // BREAKPOINT
 					break;
 			}
 		}
