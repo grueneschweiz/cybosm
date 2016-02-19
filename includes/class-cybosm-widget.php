@@ -44,10 +44,13 @@ if( ! class_exists( 'Cybosm_Widget' ) ) {
 				echo $args['before_title'] . $title . $args['after_title'];
 			}
 			
+               $sticky       = $instance[ 'sticky' ] ? 'sticky' : '';
+               $sharing_only = $instance[ 'sharing_only' ] ? true : false;
+                              
 			// echo out the social buttons
 			require_once CYBOSM_PLUGIN_PATH . '/includes/class-cybosm-frontend.php';
 			$cybosm = new Cybosm_Frontend();
-			$cybosm->display( 'widget_area_cybosm' );
+			$cybosm->display( 'widget_area_cybosm', $sticky, $sharing_only );
 			
 			// before and after widget arguments are defined by themes
 			echo $args['after_widget'];
@@ -63,12 +66,7 @@ if( ! class_exists( 'Cybosm_Widget' ) ) {
 				$title = __( 'The world is social.', 'cybosm' );
 			}
 			// Widget admin form
-			?>
-			<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-			</p>
-			<?php 
+			include CYBOSM_PLUGIN_PATH . '/admin/widget-form.php'; 
 		}
 		
 		/*
@@ -76,7 +74,9 @@ if( ! class_exists( 'Cybosm_Widget' ) ) {
 		 */
 		public function update( $new_instance, $old_instance ) {
 			$instance = array();
-			$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+			$instance['title']          = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+               $instance['sharing_only']   = $new_instance['sharing_only'];
+               $instance['sticky']         = $new_instance['sticky'];
 			return $instance;
 		}
 	} // Class Cybosm_Widget ends here

@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Cybosm
  * Plugin URI: https://github.com/cyrillbolliger/cybosm
- * Version: 1.0.3
+ * Version: 1.1.0
  * Description: Yet another social sharing plugin. Extremly lightwight.
  * Author: Cyrill Bolliger
  * Author URI: http://www.cyrillbolliger.ch
@@ -43,7 +43,7 @@ define( 'CYBOSM_PLUGIN_PATH', dirname( __FILE__ ) );
 /**
  * version number (dont forget to change it also in the header)
  */
-define( 'CYBOSM_VERSION', '1.0.3' );
+define( 'CYBOSM_VERSION', '1.1.0' );
 
 /**
  * plugin prefix
@@ -314,6 +314,31 @@ if ( ! class_exists( 'Cybosm_Main' ) ) {
 				CYBOSM_PLUGIN_PREFIX . '_youtube_options',
 				array(
 					'id' => CYBOSM_PLUGIN_PREFIX . '_yt_url',
+				)
+			);
+               
+               /**
+			 * E-MAIL
+			 */
+			add_settings_section(
+				CYBOSM_PLUGIN_PREFIX . '_email_options', 
+				__( 'Email', 'cybosm' ), 
+				array( &$this, 'display_section_description' ), 
+				CYBOSM_PLUGIN_PREFIX . '_options'
+			);
+			
+			add_settings_field( 
+				CYBOSM_PLUGIN_PREFIX . '_em_option', 
+				__( 'Choose the functionality of the button', 'cybosm' ), 
+				array( &$this, 'render_options_radiobuttons' ),
+				CYBOSM_PLUGIN_PREFIX . '_options', 
+				CYBOSM_PLUGIN_PREFIX . '_email_options',
+				array(
+					'id' => CYBOSM_PLUGIN_PREFIX . '_em_option',
+					'options' => array( 
+						'off'   => __( 'Off', 'cybosm' ),
+						'share' => __( 'Share by email', 'cybosm' ), 
+					)
 				)
 			);
 		}

@@ -2,13 +2,20 @@ div#cybosm-side
 	{ position: fixed; right: 0; top: 50%; background-color: #fff; border-radius: 5px 0 0 5px;
 	  box-shadow: 0 0 3px 1px #dadada inset; }
 
-aside.widget_cybosm_widget div#widget_area_cybosm a.cybosm-icon
+aside.widget_cybosm_widget div#widget_area_cybosm-sticky
+	{ float: right; margin-top: 10px; }
+     
+aside.widget_cybosm_widget div#widget_area_cybosm a.cybosm-icon,
+aside.widget_cybosm_widget div#widget_area_cybosm-sticky a.cybosm-icon
 	{ float: left; }
 
 a.cybosm-icon
-	{ width: 40px; height: 40px; background: transparent url( '../img/cybosm.png' ); display: block; background-size: 175px 85px; 
+	{ width: 40px; height: 40px; background: transparent url( '../img/cybosm.png' ); display: block; background-size: 219px 85px; 
 	  border-radius: 5px; box-shadow: 0 0 7px 1px #cc006d inset; margin: 5px; }
 
+aside.widget_cybosm_widget div#widget_area_cybosm-sticky a.cybosm-icon
+     { border-radius: 20px; }
+     
 a.cybosm-icon:hover
 	{ box-shadow: 0 0 4px 1px #709e2e inset; background-color: #aec504; }
 
@@ -24,6 +31,9 @@ a.cybosm-gp-icon
 a.cybosm-yt-icon
 	{ background-position: -135px bottom; }
 
+a.cybosm-em-icon
+	{ background-position: -180px bottom; }
+
 a.cybosm-fb-icon:hover
 	{ background-position: 0 top; }
 
@@ -35,6 +45,9 @@ a.cybosm-gp-icon:hover
 
 a.cybosm-yt-icon:hover
 	{ background-position: -135px top; }
+     
+a.cybosm-em-icon:hover
+	{ background-position: -180px top; }
 
 .screen-reader-text
 	{ clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden; }
