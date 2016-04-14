@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Cybosm\n"
-"POT-Creation-Date: 2015-10-25 20:21+0100\n"
-"PO-Revision-Date: 2015-10-25 20:27+0100\n"
+"POT-Creation-Date: 2016-04-14 22:38+0100\n"
+"PO-Revision-Date: 2016-04-14 22:41+0100\n"
 "Last-Translator: Cyrill Bolliger <bolliger@gmx.ch>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -23,10 +23,12 @@ msgid "Facebook"
 msgstr "Facebook"
 
 #: ../cybosm.php:174 ../cybosm.php:211 ../cybosm.php:259 ../cybosm.php:296
+#: ../cybosm.php:332
 msgid "Choose the functionality of the button"
 msgstr "Wähle die Funktion der Buttons"
 
 #: ../cybosm.php:181 ../cybosm.php:218 ../cybosm.php:266 ../cybosm.php:303
+#: ../cybosm.php:339
 msgid "Off"
 msgstr "Aus"
 
@@ -78,62 +80,87 @@ msgstr "Link zum Kanal"
 msgid "Link to your Youtube chanel"
 msgstr "Link zu deinem Youtube Kanal"
 
-#: ../cybosm.php:363
+#: ../cybosm.php:325
+msgid "Email"
+msgstr "Email"
+
+#: ../cybosm.php:340
+msgid "Share by email"
+msgstr "Teilen per Email"
+
+#: ../cybosm.php:388
 #, php-format
 msgid "Enter your options for the %s button here."
 msgstr "Gib hier deine Einstellung für den %s-Button an."
 
-#: ../cybosm.php:370 ../admin/options.php:2
+#: ../cybosm.php:395 ../admin/options.php:2
 msgid "Cybo Social Sharing Options"
 msgstr "Cybo Social Sharing Einstellungen"
 
-#: ../cybosm.php:370 ../includes/class-cybosm-widget.php:26
+#: ../cybosm.php:395 ../includes/class-cybosm-widget.php:26
 msgid "Cybo Social Sharing"
 msgstr "Cybo Social Sharing"
 
-#: ../cybosm.php:378
+#: ../cybosm.php:403
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Nicht genügend Rechte um diese Seite anzuzeigen."
 
-#: ../includes/class-cybosm-frontend.php:76
+#: ../admin/widget-form.php:2
+msgid "Title:"
+msgstr "Titel:"
+
+#: ../admin/widget-form.php:7
+msgid "Use sharebuttons only."
+msgstr "Nur teilen."
+
+#: ../admin/widget-form.php:11
+msgid "Don't jump to the right on big screens."
+msgstr "Bleibe in der Sidebar. Auch auf grossen Bildschirmen."
+
+#: ../includes/class-cybosm-frontend.php:78
+#, php-format
+msgid "I'd like to recomend you the following page: %s"
+msgstr "Ich möchte Dir die folgende Seite empfehlen: %s"
+
+#: ../includes/class-cybosm-frontend.php:93
 msgid "Share this page on facebook"
 msgstr "Diese Seite auf Facebook teilen"
 
-#: ../includes/class-cybosm-frontend.php:76
+#: ../includes/class-cybosm-frontend.php:93
 msgid "Visit us on facebook"
 msgstr "Besuchen Sie uns auf Facebook"
 
-#: ../includes/class-cybosm-frontend.php:80
+#: ../includes/class-cybosm-frontend.php:97
 msgid "Share this page on twitter"
 msgstr "Diese Seite auf Twitter teilen"
 
-#: ../includes/class-cybosm-frontend.php:80
+#: ../includes/class-cybosm-frontend.php:97
 msgid "Visit us on twitter"
 msgstr "Besuchen Sie uns auf Twitter"
 
-#: ../includes/class-cybosm-frontend.php:84
+#: ../includes/class-cybosm-frontend.php:101
 msgid "Share this page on google+"
 msgstr "Diese Seite auf Google+ teilen"
 
-#: ../includes/class-cybosm-frontend.php:84
+#: ../includes/class-cybosm-frontend.php:101
 msgid "Visit us on google+"
 msgstr "Besuchen Sie uns auf Google+"
 
-#: ../includes/class-cybosm-frontend.php:88
+#: ../includes/class-cybosm-frontend.php:105
 msgid "Check out our youtube chanel"
 msgstr "Besuchen Sie unseren Youtube Kanal"
+
+#: ../includes/class-cybosm-frontend.php:109
+msgid "Email this page to a friend."
+msgstr "Sende diese Seite per Email."
 
 #: ../includes/class-cybosm-widget.php:29
 msgid "Displays the social buttons as definded on the settings page."
 msgstr "Zeigt die Social Buttons gemäss Einstellungen an."
 
-#: ../includes/class-cybosm-widget.php:63
+#: ../includes/class-cybosm-widget.php:66
 msgid "The world is social."
 msgstr "Die Welt ist sozial."
-
-#: ../includes/class-cybosm-widget.php:68
-msgid "Title:"
-msgstr "Titel:"
 
 #~ msgid "Unterschriften eintragen"
 #~ msgstr "Ajouter signatures"
