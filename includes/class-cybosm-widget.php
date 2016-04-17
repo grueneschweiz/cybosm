@@ -60,11 +60,10 @@ if( ! class_exists( 'Cybosm_Widget' ) ) {
 		 * the backend
 		 */
 		public function form( $instance ) {
-			if ( isset( $instance[ 'title' ] ) ) {
-				$title = $instance[ 'title' ];
-			} else {
-				$title = __( 'The world is social.', 'cybosm' );
-			}
+			$title        = isset( $instance[ 'title' ] ) ? $instance[ 'title' ] : __( 'The world is social.', 'cybosm' );
+               $sharing_only = isset( $instance[ 'sharing_only' ] ) ? $instance[ 'sharing_only' ] : null;
+               $sticky       = isset( $instance[ 'sticky' ] ) ? $instance[ 'sticky' ] : null;
+               
 			// Widget admin form
 			include CYBOSM_PLUGIN_PATH . '/admin/widget-form.php'; 
 		}
@@ -75,8 +74,8 @@ if( ! class_exists( 'Cybosm_Widget' ) ) {
 		public function update( $new_instance, $old_instance ) {
 			$instance = array();
 			$instance['title']          = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-               $instance['sharing_only']   = $new_instance['sharing_only'];
-               $instance['sticky']         = $new_instance['sticky'];
+               $instance['sharing_only']   = isset( $new_instance['sharing_only'] ) ? $new_instance['sharing_only'] : null;
+               $instance['sticky']         = isset( $new_instance['sticky'] ) ? $new_instance['sticky'] : null;
 			return $instance;
 		}
 	} // Class Cybosm_Widget ends here
