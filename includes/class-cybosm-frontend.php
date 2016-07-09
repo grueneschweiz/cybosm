@@ -15,9 +15,9 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
 		 */
 		public function display( $id, $sticky, $sharing_only ) {
 			$options = get_option( CYBOSM_PLUGIN_PREFIX . '_options' );
-			
-			$types         = array( 'fb', 'tw', 'gp', 'yt', 'em' );
-               $shareable     = array( 'fb', 'tw', 'gp', 'em' );
+			               
+			$types         = array( 'fb', 'tw', 'gp', 'yt', 'em', 'pt' );
+               $shareable     = array( 'fb', 'tw', 'gp', 'em', 'pt' );
 			$icons         = array();
 			
                if ( $sharing_only ) {
@@ -27,13 +27,13 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
                }
                               
 			foreach( $selected_types as $type ) {
-				if ( ! ( 'off' == $options[ "cybosm_{$type}_option" ] ) ) {
+				if ( ! ( 'off' == $options[ CYBOSM_PLUGIN_PREFIX . "_{$type}_option" ] ) ) {
 					$icons[ $type ]['type'] = $type;
 					$icons[ $type ]['link'] = $this->get_link( $options, $type, $sharing_only );
 					$icons[ $type ]['screenreader'] = $this->get_screenreader_text( $options, $type );
 				}
 			}
-			
+			               
                $element_id = empty( $sticky ) ? $id : $id . '-' . $sticky;
                
 			include CYBOSM_PLUGIN_PATH . '/frontend/cybosm-icons.php';
@@ -43,12 +43,12 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
 		 * Get link of the social icon
 		 */
 		public function get_link( $options, $type, $share_only ) {
-			
-			if ( 'visit' == $options["cybosm_{$type}_option"] 
+               
+			if ( 'visit' == $options[ CYBOSM_PLUGIN_PREFIX . "_{$type}_option" ] 
                     && false == $share_only ) {
-				return $options["cybosm_{$type}_url"]; // BREAKPOINT
+				return $options[ CYBOSM_PLUGIN_PREFIX . "_{$type}_url" ]; // BREAKPOINT
 			}
-			
+               
 			global $wp;
 			$current_url = home_url( add_query_arg( array(), $wp->request ) );
 			
@@ -77,7 +77,12 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
                                 sprintf(
                                    __( "I'd like to recomend you the following page: %s", 'cybosm' ),
                                    urlencode( $current_url )
-                                );
+                                ); // BREAKPOINT
+                         break;
+                    
+                    case 'pt':
+                         return 'javascript:window.print()'; // BREAKPOINT
+                         break;
 			}
 		}
 		
@@ -108,6 +113,10 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
                     case 'em':
 					return __( 'Email this page to a friend.', 'cybosm' ); // BREAKPOINT
 					break;
+                    
+                    case 'pt':
+                         return __( 'Print this page.', 'cybosm' );
+                         break;
 			}
 		}
 	}

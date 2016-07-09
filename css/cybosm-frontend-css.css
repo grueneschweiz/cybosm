@@ -10,7 +10,7 @@ aside.widget_cybosm_widget div#widget_area_cybosm-sticky a.cybosm-icon
 	{ float: left; }
 
 a.cybosm-icon
-	{ width: 40px; height: 40px; background: transparent url( '../img/cybosm.png' ); display: block; background-size: 219px 85px; 
+	{ width: 40px; height: 40px; background: transparent url( '../img/cybosm.png' ); display: block; background-size: 264px 85px; 
 	  border-radius: 5px; box-shadow: 0 0 7px 1px #cc006d inset; margin: 5px; }
 
 aside.widget_cybosm_widget div#widget_area_cybosm-sticky a.cybosm-icon
@@ -32,8 +32,11 @@ a.cybosm-yt-icon
 	{ background-position: -135px bottom; }
 
 a.cybosm-em-icon
-	{ background-position: -180px bottom; }
+	{ background-position: -179px bottom; }
 
+a.cybosm-pt-icon
+	{ background-position: -224px bottom; }
+     
 a.cybosm-fb-icon:hover
 	{ background-position: 0 top; }
 
@@ -47,7 +50,10 @@ a.cybosm-yt-icon:hover
 	{ background-position: -135px top; }
      
 a.cybosm-em-icon:hover
-	{ background-position: -180px top; }
+	{ background-position: -179px top; }
+     
+a.cybosm-pt-icon:hover
+	{ background-position: -224px top; }
 
 .screen-reader-text
 	{ clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden; }

@@ -140,16 +140,18 @@ if ( ! class_exists( 'Cybosm_Main' ) ) {
 			if ( CYBOSM_VERSION == $current_version ) {
 				return; // BREAKPOINT
 			}
-			
-			/*
-			// run the upgrade routine for versions smaller 1.3.0
-			if ( -1 == version_compare( $current_version, '1.3.0' ) ) {
-				// YOUR UPGRADE ROUTINE
+               
+			// run the upgrade routine for versions smaller 1.2.0
+			if ( -1 == version_compare( $current_version, '1.2.0' ) ) {
+				// add defaults for the print button
+                    $options = get_option( CYBOSM_PLUGIN_PREFIX . '_options' );
+                    $options[ CYBOSM_PLUGIN_PREFIX . '_pt_option' ] = 'off';
+                    update_option( CYBOSM_PLUGIN_PREFIX . '_options', $options );
 			}
 			
 			// set the current version number
-			$this->set_version_number();
-			*/
+			//$this->set_version_number();
+               
 		}
 		
 		
@@ -158,10 +160,18 @@ if ( ! class_exists( 'Cybosm_Main' ) ) {
 		 */
 		public function init_options() {
 			register_setting( CYBOSM_PLUGIN_PREFIX . '_options', CYBOSM_PLUGIN_PREFIX . '_options' );
-			
-			/**
-			 * FACEBOOK
-			 */
+			$this->register_facebook_settings();
+               $this->register_twitter_settings();
+               $this->register_gplus_settings();
+               $this->register_youtube_settings();
+               $this->register_email_settings();
+               $this->register_print_settings();
+		}
+          
+          /**
+           * register the facebook settings
+           */
+          public function register_facebook_settings() {
 			add_settings_section(
 				CYBOSM_PLUGIN_PREFIX . '_facebook_options', 
 				__( 'Facebook', 'cybosm' ), 
@@ -195,8 +205,13 @@ if ( ! class_exists( 'Cybosm_Main' ) ) {
 					'id' => CYBOSM_PLUGIN_PREFIX . '_fb_url',
 				)
 			);
-			
-			/**
+          }
+          
+          /**
+           * register the twitter settings
+           */
+          public function register_twitter_settings() {
+               /**
 			 * TWITTER
 			 */
 			add_settings_section(
@@ -243,10 +258,12 @@ if ( ! class_exists( 'Cybosm_Main' ) ) {
 					'id' => CYBOSM_PLUGIN_PREFIX . '_tw_via',
 				)
 			);
-			
-			/**
-			 * GOOGLE PLUS
-			 */
+          }
+          
+          /**
+           * register the google plus settings
+           */
+          public function register_gplus_settings() {
 			add_settings_section(
 				CYBOSM_PLUGIN_PREFIX . '_gplus_options', 
 				__( 'Google+', 'cybosm' ), 
@@ -280,10 +297,12 @@ if ( ! class_exists( 'Cybosm_Main' ) ) {
 					'id' => CYBOSM_PLUGIN_PREFIX . '_gp_url',
 				)
 			);
-			
-			/**
-			 * YOUTUBE
-			 */
+          }
+          
+          /**
+           * register the youtube settings
+           */
+          public function register_youtube_settings() {
 			add_settings_section(
 				CYBOSM_PLUGIN_PREFIX . '_youtube_options', 
 				__( 'Youtube', 'cybosm' ), 
@@ -316,10 +335,12 @@ if ( ! class_exists( 'Cybosm_Main' ) ) {
 					'id' => CYBOSM_PLUGIN_PREFIX . '_yt_url',
 				)
 			);
-               
-               /**
-			 * E-MAIL
-			 */
+          }
+          
+          /**
+           * register the email settings
+           */
+          public function register_email_settings() {
 			add_settings_section(
 				CYBOSM_PLUGIN_PREFIX . '_email_options', 
 				__( 'Email', 'cybosm' ), 
@@ -341,7 +362,34 @@ if ( ! class_exists( 'Cybosm_Main' ) ) {
 					)
 				)
 			);
-		}
+          }
+          
+          /**
+           * register the print settings
+           */
+          public function register_print_settings() {
+			add_settings_section(
+				CYBOSM_PLUGIN_PREFIX . '_print_options', 
+				__( 'Print', 'cybosm' ), 
+				array( &$this, 'display_section_description' ), 
+				CYBOSM_PLUGIN_PREFIX . '_options'
+			);
+			
+			add_settings_field( 
+				CYBOSM_PLUGIN_PREFIX . '_pt_option', 
+				__( 'Choose the functionality of the button', 'cybosm' ), 
+				array( &$this, 'render_options_radiobuttons' ),
+				CYBOSM_PLUGIN_PREFIX . '_options', 
+				CYBOSM_PLUGIN_PREFIX . '_print_options',
+				array(
+					'id' => CYBOSM_PLUGIN_PREFIX . '_pt_option',
+					'options' => array( 
+						'off'   => __( 'Off', 'cybosm' ),
+						'print' => __( 'Print', 'cybosm' ), 
+					)
+				)
+			);
+          }
 		
 		/**
 		 * Render the html for options radiobuttons
