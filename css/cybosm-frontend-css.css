@@ -10,14 +10,14 @@ aside.widget_cybosm_widget div#widget_area_cybosm-sticky a.cybosm-icon
 	{ float: left; }
 
 a.cybosm-icon
-	{ width: 40px; height: 40px; background: transparent url( '../img/cybosm.png' ); display: block; background-size: 264px 85px; 
+	{ width: 40px; height: 40px; background: #e10078 url( '../img/cybosm_white_only.png' ); display: block; background-size: 264px 40px; 
 	  border-radius: 5px; box-shadow: 0 0 7px 1px #cc006d inset; margin: 5px; }
 
 aside.widget_cybosm_widget div#widget_area_cybosm-sticky a.cybosm-icon
      { border-radius: 20px; }
      
 a.cybosm-icon:hover
-	{ box-shadow: 0 0 4px 1px #709e2e inset; background-color: #aec504; }
+	{ box-shadow: 0 0 7px 1px #709e2e inset; background-color: #84b414; }
 
 a.cybosm-fb-icon
 	{ background-position: 0 bottom; }
