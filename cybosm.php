@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Cybosm
  * Plugin URI: https://github.com/cyrillbolliger/cybosm
- * Version: 1.2.0
+ * Version: 1.2.1
  * Description: Yet another social sharing plugin. Extremly lightwight.
  * Author: Cyrill Bolliger
  * Author URI: http://www.cyrillbolliger.ch
@@ -43,7 +43,7 @@ define( 'CYBOSM_PLUGIN_PATH', dirname( __FILE__ ) );
 /**
  * version number (dont forget to change it also in the header)
  */
-define( 'CYBOSM_VERSION', '1.2.0' );
+define( 'CYBOSM_VERSION', '1.2.1' );
 
 /**
  * plugin prefix
