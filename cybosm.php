@@ -150,7 +150,7 @@ if ( ! class_exists( 'Cybosm_Main' ) ) {
 			}
 			
 			// set the current version number
-			//$this->set_version_number();
+			$this->set_version_number();
                
 		}
 		
