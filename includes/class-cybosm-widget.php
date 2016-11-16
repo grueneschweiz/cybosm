@@ -35,6 +35,11 @@ if( ! class_exists( 'Cybosm_Widget' ) ) {
 		 */
 		public function widget( $args, $instance ) {
 			
+               // prepopulate instance if nothing set yet
+               $instance['title']        = empty( $instance['title'] ) ? '' : $instance['title'];
+               $instance['sticky']       = empty( $instance['sticky'] ) ? '' : $instance['sticky'];
+               $instance['sharing_only'] = empty( $instance['sharing_only'] ) ? '' : $instance['sharing_only'];
+               
 			// before and after widget arguments are defined by themes
 			echo $args['before_widget'];
 			
@@ -44,8 +49,8 @@ if( ! class_exists( 'Cybosm_Widget' ) ) {
 				echo $args['before_title'] . $title . $args['after_title'];
 			}
 			
-               $sticky       = $instance[ 'sticky' ] ? 'sticky' : '';
-               $sharing_only = $instance[ 'sharing_only' ] ? true : false;
+               $sticky       = $instance['sticky'] ? 'sticky' : '';
+               $sharing_only = $instance['sharing_only'] ? true : false;
                               
 			// echo out the social buttons
 			require_once CYBOSM_PLUGIN_PATH . '/includes/class-cybosm-frontend.php';
