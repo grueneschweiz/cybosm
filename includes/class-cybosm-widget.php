@@ -65,9 +65,9 @@ if( ! class_exists( 'Cybosm_Widget' ) ) {
 		 * the backend
 		 */
 		public function form( $instance ) {
-			$title        = isset( $instance[ 'title' ] ) ? $instance[ 'title' ] : __( 'The world is social.', 'cybosm' );
-               $sharing_only = isset( $instance[ 'sharing_only' ] ) ? $instance[ 'sharing_only' ] : null;
-               $sticky       = isset( $instance[ 'sticky' ] ) ? $instance[ 'sticky' ] : null;
+			$title        = isset( $instance['title'] ) ? $instance['title'] : __( 'The world is social.', 'cybosm' );
+               $sharing_only = isset( $instance['sharing_only'] ) ? $instance['sharing_only'] : null;
+               $sticky       = isset( $instance['sticky'] ) ? $instance['sticky'] : null;
                
 			// Widget admin form
 			include CYBOSM_PLUGIN_PATH . '/admin/widget-form.php'; 
