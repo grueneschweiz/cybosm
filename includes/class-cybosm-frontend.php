@@ -17,7 +17,7 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
 			$options = get_option( CYBOSM_PLUGIN_PREFIX . '_options' );
 			               
 			$types         = array( 'fb', 'tw', 'gp', 'yt', 'em', 'pt' );
-               $shareable     = array( 'fb', 'tw', 'gp', 'em', 'pt' );
+			$shareable     = array( 'fb', 'tw', 'gp', 'em', 'pt' );
 			$icons         = array();
 			
                if ( $sharing_only ) {
@@ -27,7 +27,7 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
                }
                               
 			foreach( $selected_types as $type ) {
-				if ( ! ( 'off' == $options[ CYBOSM_PLUGIN_PREFIX . "_{$type}_option" ] ) ) {
+				if ( isset($options[ CYBOSM_PLUGIN_PREFIX . "_{$type}_option" ]) && ! ( 'off' == $options[ CYBOSM_PLUGIN_PREFIX . "_{$type}_option" ] ) ) {
 					$icons[ $type ]['type'] = $type;
 					$icons[ $type ]['link'] = $this->get_link( $options, $type, $sharing_only );
 					$icons[ $type ]['screenreader'] = $this->get_screenreader_text( $options, $type );
@@ -44,7 +44,7 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
 		 */
 		public function get_link( $options, $type, $share_only ) {
                
-			if ( 'visit' == $options[ CYBOSM_PLUGIN_PREFIX . "_{$type}_option" ] 
+			if ( isset($options[ CYBOSM_PLUGIN_PREFIX . "_{$type}_option" ]) && 'visit' == $options[ CYBOSM_PLUGIN_PREFIX . "_{$type}_option" ]
                     && false == $share_only ) {
 				return $options[ CYBOSM_PLUGIN_PREFIX . "_{$type}_url" ]; // BREAKPOINT
 			}
