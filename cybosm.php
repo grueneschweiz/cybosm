@@ -135,18 +135,27 @@ if ( ! class_exists( 'Cybosm_Main' ) ) {
 		 */
 		public function upgrade() {
 			$current_version = get_option( CYBOSM_PLUGIN_PREFIX . '_version_number' );
-			
+
 			// if everything is up to date stop here
 			if ( CYBOSM_VERSION == $current_version ) {
 				return; // BREAKPOINT
 			}
-               
+
 			// run the upgrade routine for versions smaller 1.2.0
 			if ( -1 == version_compare( $current_version, '1.2.0' ) ) {
 				// add defaults for the print button
                     $options = get_option( CYBOSM_PLUGIN_PREFIX . '_options' );
                     $options[ CYBOSM_PLUGIN_PREFIX . '_pt_option' ] = 'off';
                     update_option( CYBOSM_PLUGIN_PREFIX . '_options', $options );
+			}
+
+			// run the upgrade routine for versions smaller 1.3.0
+			if ( -1 == version_compare( $current_version, '1.3.0' ) ) {
+				// add defaults for the print button
+				$options = get_option( CYBOSM_PLUGIN_PREFIX . '_options' );
+				$options[ CYBOSM_PLUGIN_PREFIX . '_ig_option' ] = 'off';
+				$options[ CYBOSM_PLUGIN_PREFIX . '_ig_url' ] = '';
+				update_option( CYBOSM_PLUGIN_PREFIX . '_options', $options );
 			}
 			
 			// set the current version number
@@ -281,8 +290,7 @@ if ( ! class_exists( 'Cybosm_Main' ) ) {
 					'id' => CYBOSM_PLUGIN_PREFIX . '_ig_option',
 					'options' => array( 
 						'off'   => __( 'Off', 'cybosm' ),
-//						'share' => __( 'Share button', 'cybosm' ),
-						'visit' => __( 'Link to profile', 'cybosm' ), 
+						'visit' => __( 'Link to profile', 'cybosm' ),
 					)
 				)
 			);
