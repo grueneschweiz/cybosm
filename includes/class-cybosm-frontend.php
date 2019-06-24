@@ -16,8 +16,8 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
 		public function display( $id, $sticky, $sharing_only ) {
 			$options = get_option( CYBOSM_PLUGIN_PREFIX . '_options' );
 			               
-			$types         = array( 'fb', 'tw', 'gp', 'yt', 'em', 'pt' );
-			$shareable     = array( 'fb', 'tw', 'gp', 'em', 'pt' );
+			$types         = array( 'fb', 'tw', 'ig', 'yt', 'em', 'pt' );
+			$shareable     = array( 'fb', 'tw', 'ig', 'em', 'pt' );
 			$icons         = array();
 			
                if ( $sharing_only ) {
@@ -68,8 +68,8 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
 					return 'https://twitter.com/share?url=' . urlencode( $current_url ) . $via ; // BREAKPOINT
 					break;
 				
-				case 'gp':
-					return 'https://plus.google.com/share?url=' . urlencode( $current_url ); // BREAKPOINT
+				case 'ig':
+					return 'https://www.instagram.com/share?url=' . urlencode( $current_url ); // BREAKPOINT
 					break;
                     
                     case 'em':
@@ -102,8 +102,8 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
 					return 'share' == $o ? __( 'Share this page on twitter', 'cybosm' ) : __( 'Visit us on twitter', 'cybosm' ); // BREAKPOINT
 					break;
 				
-				case 'gp':
-					return 'share' == $o ? __( 'Share this page on google+', 'cybosm' ) : __( 'Visit us on google+', 'cybosm' ); // BREAKPOINT
+				case 'ig':
+					return 'share' == $o ? __( 'Share this page on Instagram', 'cybosm' ) : __( 'Visit us on Instagram', 'cybosm' ); // BREAKPOINT
 					break;
 				
 				case 'yt':
