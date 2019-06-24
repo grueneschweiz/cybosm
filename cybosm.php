@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Cybosm
  * Plugin URI: https://github.com/cyrillbolliger/cybosm
- * Version: 1.2.4
+ * Version: 1.2.5
  * Description: Yet another social sharing plugin. Extremly lightwight.
  * Author: Cyrill Bolliger
  * Author URI: http://www.cyrillbolliger.ch
@@ -43,7 +43,7 @@ define( 'CYBOSM_PLUGIN_PATH', dirname( __FILE__ ) );
 /**
  * version number (dont forget to change it also in the header)
  */
-define( 'CYBOSM_VERSION', '1.2.4' );
+define( 'CYBOSM_VERSION', '1.2.5' );
 
 /**
  * plugin prefix
@@ -162,7 +162,7 @@ if ( ! class_exists( 'Cybosm_Main' ) ) {
 			register_setting( CYBOSM_PLUGIN_PREFIX . '_options', CYBOSM_PLUGIN_PREFIX . '_options' );
 			$this->register_facebook_settings();
                $this->register_twitter_settings();
-               $this->register_gplus_settings();
+               $this->register_instagram_settings();
                $this->register_youtube_settings();
                $this->register_email_settings();
                $this->register_print_settings();
@@ -261,44 +261,44 @@ if ( ! class_exists( 'Cybosm_Main' ) ) {
           }
           
           /**
-           * register the google plus settings
+           * register the instagram settings
            */
-          public function register_gplus_settings() {
+          public function register_instagram_settings() {
 			add_settings_section(
-				CYBOSM_PLUGIN_PREFIX . '_gplus_options', 
-				__( 'Google+', 'cybosm' ), 
+				CYBOSM_PLUGIN_PREFIX . '_instagram_options',
+				__( 'Instagram', 'cybosm' ),
 				array( &$this, 'display_section_description' ), 
 				CYBOSM_PLUGIN_PREFIX . '_options'
 			);
 			
 			add_settings_field( 
-				CYBOSM_PLUGIN_PREFIX . '_gp_option', 
+				CYBOSM_PLUGIN_PREFIX . '_ig_option',
 				__( 'Choose the functionality of the button', 'cybosm' ), 
 				array( &$this, 'render_options_radiobuttons' ),
 				CYBOSM_PLUGIN_PREFIX . '_options', 
-				CYBOSM_PLUGIN_PREFIX . '_gplus_options',
+				CYBOSM_PLUGIN_PREFIX . '_instagram_options',
 				array(
-					'id' => CYBOSM_PLUGIN_PREFIX . '_gp_option',
+					'id' => CYBOSM_PLUGIN_PREFIX . '_ig_option',
 					'options' => array( 
 						'off'   => __( 'Off', 'cybosm' ),
-						'share' => __( 'Share button', 'cybosm' ), 
+//						'share' => __( 'Share button', 'cybosm' ),
 						'visit' => __( 'Link to profile', 'cybosm' ), 
 					)
 				)
 			);
 			
 			add_settings_field( 
-				CYBOSM_PLUGIN_PREFIX . '_gp_url', 
-				__( 'Link to your Google+ profile', 'cybosm' ), 
+				CYBOSM_PLUGIN_PREFIX . '_ig_url',
+				__( 'Link to your Instagram profile', 'cybosm' ),
 				array( &$this, 'render_options_url_input' ),
 				CYBOSM_PLUGIN_PREFIX . '_options', 
-				CYBOSM_PLUGIN_PREFIX . '_gplus_options',
+				CYBOSM_PLUGIN_PREFIX . '_instagram_options',
 				array(
-					'id' => CYBOSM_PLUGIN_PREFIX . '_gp_url',
+					'id' => CYBOSM_PLUGIN_PREFIX . '_ig_url',
 				)
 			);
           }
-          
+
           /**
            * register the youtube settings
            */

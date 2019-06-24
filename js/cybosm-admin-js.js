@@ -16,7 +16,7 @@
 		 * adds the click events
 		 */
 		this.initiateVisibilitySwitcher = function initiateVisibilitySwitcher() {
-			var obj = [ 'fb', 'tw', 'gp', 'yt' ];
+			var obj = [ 'fb', 'tw', 'ig', 'yt' ];
 			
 			$.each( obj, function( index, value ) {
 				$( '.cybosm_' + value + '_option' ).click( function() {
@@ -29,7 +29,7 @@
 		 * setState
 		 */
 		this.setState = function setState() {
-			var obj = [ 'fb', 'tw', 'gp', 'yt' ];
+			var obj = [ 'fb', 'tw', 'ig', 'yt' ];
 			
 			$.each( obj, function( index, value ) {
 				if ( $( '#cybosm_' + value + '_option_visit' ).is( ':checked' ) ) {
