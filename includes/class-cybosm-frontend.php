@@ -17,7 +17,7 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
 			$options = get_option( CYBOSM_PLUGIN_PREFIX . '_options' );
 			               
 			$types         = array( 'fb', 'tw', 'ig', 'yt', 'em', 'pt' );
-			$shareable     = array( 'fb', 'tw', 'ig', 'em', 'pt' );
+			$shareable     = array( 'fb', 'tw', 'em', 'pt' );
 			$icons         = array();
 			
                if ( $sharing_only ) {
@@ -68,17 +68,17 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
 					return 'https://twitter.com/share?url=' . urlencode( $current_url ) . $via ; // BREAKPOINT
 					break;
 				
-                    case 'em':
-                         return 'mailto:?subject=' . get_the_title() . '&amp;body=' .
-                                sprintf(
-                                   __( "I'd like to recomend you the following page: %s", 'cybosm' ),
-                                   urlencode( $current_url )
-                                ); // BREAKPOINT
-                         break;
-                    
-                    case 'pt':
-                         return 'javascript:window.print()'; // BREAKPOINT
-                         break;
+                case 'em':
+                     return 'mailto:?subject=' . get_the_title() . '&amp;body=' .
+                            sprintf(
+                               __( "I'd like to recomend you the following page: %s", 'cybosm' ),
+                               urlencode( $current_url )
+                            ); // BREAKPOINT
+                     break;
+
+                case 'pt':
+                     return 'javascript:window.print()'; // BREAKPOINT
+                     break;
 			}
 		}
 		
