@@ -68,10 +68,6 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
 					return 'https://twitter.com/share?url=' . urlencode( $current_url ) . $via ; // BREAKPOINT
 					break;
 				
-				case 'ig':
-					return 'https://www.instagram.com/share?url=' . urlencode( $current_url ); // BREAKPOINT
-					break;
-                    
                     case 'em':
                          return 'mailto:?subject=' . get_the_title() . '&amp;body=' .
                                 sprintf(
@@ -103,7 +99,7 @@ if( ! class_exists( 'Cybosm_Frontend' ) ) {
 					break;
 				
 				case 'ig':
-					return 'share' == $o ? __( 'Share this page on Instagram', 'cybosm' ) : __( 'Visit us on Instagram', 'cybosm' ); // BREAKPOINT
+					return __( 'Visit us on Instagram', 'cybosm' ); // BREAKPOINT
 					break;
 				
 				case 'yt':
